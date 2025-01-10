@@ -12,7 +12,7 @@ function fnTradeEditCheck() {
 		return;
 	}
 
-	tmp = form.nameYomi.value;
+	tmp = form.nameFuri.value;
 	if (tmp.length > 100) {
 		alert('業者名（よみ）は100文字以内で入力してください');
 		return;
@@ -73,7 +73,7 @@ function fnTradeEditCheck() {
 	}
 
 	if (confirm('この内容で登録します。よろしいですか？')) {
-		form.act.value = 'tradeEditCompleta';
+		form.act.value = 'tradeEditComplete';
 		form.submit();
 	}
 }
@@ -83,6 +83,7 @@ function fnTradeEditCheck() {
 function fnTradeDeleteCheck(no) {
 	if (confirm('削除します。よろしいですか？')) {
 		form.tradeNo.value = no;
+		form.act.value = 'tradeDelete';
 		form.submit();
 	}
 }
