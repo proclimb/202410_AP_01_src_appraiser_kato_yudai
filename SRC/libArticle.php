@@ -6,14 +6,14 @@ function subArticle()
 {
 	$conn = fnDbConnect();
 
-	$sDel         = $_REQUEST['sDel'];
-	$sArticle     = $_REQUEST['sArticle'];
-	$sRoom        = $_REQUEST['sRoom'];
-	$sKeyPlace    = $_REQUEST['sKeyPlace'];
-	$sArticleNote = $_REQUEST['sArticleNote'];
-	$sKeyBox      = $_REQUEST['sKeyBox'];
-	$sDrawing     = $_REQUEST['sDrawing'];
-	$sSellCharge  = $_REQUEST['sSellCharge'];
+	$sDel         =  htmlspecialchars($_REQUEST['sDel']);
+	$sArticle     =  htmlspecialchars($_REQUEST['sArticle']);
+	$sRoom        =  htmlspecialchars($_REQUEST['sRoom']);
+	$sKeyPlace    =  htmlspecialchars($_REQUEST['sKeyPlace']);
+	$sArticleNote =  htmlspecialchars($_REQUEST['sArticleNote']);
+	$sKeyBox      =  htmlspecialchars($_REQUEST['sKeyBox']);
+	$sDrawing     =  htmlspecialchars($_REQUEST['sDrawing']);
+	$sSellCharge  =  htmlspecialchars($_REQUEST['sSellCharge']);
 
 	$orderBy = $_REQUEST['orderBy'];
 	$orderTo = $_REQUEST['orderTo'];
@@ -188,7 +188,7 @@ function subArticleEdit()
 		$btnImage = 'btn_enter.png';
 	}
 
-	subMenu2();
+	subMenu();
 ?>
 	<script type="text/javascript" src="./js/article.js"></script>
 
@@ -262,7 +262,7 @@ function subArticleEdit()
 		<a href="javascript:fnArticleEditCheck();"><img src="./images/<?php print $btnImage ?>" /></a>　
 		<a href="javascript:form.act.value='articleSearch';form.submit();"><img src="./images/btn_return.png" /></a>
 		<?php if ($articleNo) { ?>
-			&nbsp;&nbsp;<a href="javascript:fnArticleDeleteCheck(<?php print $articleNo ?>);"><img src="./images/btn_del.png" /></a>
+			<a href="javascript:fnArticleDeleteCheck(<?php print $articleNo ?>);"><img src="./images/btn_del.png" /></a>
 		<?php } ?>
 	</form>
 <?php
