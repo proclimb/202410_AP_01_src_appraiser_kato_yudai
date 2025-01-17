@@ -2,7 +2,7 @@
 //
 //工事管理リスト
 //
-function fnSqlConstList($flg, $sDel, $sArticle, $sConstTrader, $sConstFlg1, $sConstFlg2, $sConstFlg3, $sConstFlg4, $sInteriorCharge, $sPage, $orderBy, $orderTo)
+function fnSqlConstList($flg, $sDel, $sArticle,  $sConstTrader, $sConstFlg1, $sConstFlg2, $sConstFlg3, $sConstFlg4, $sInteriorCharge, $sPage, $orderBy, $orderTo)
 {
 	switch ($flg) {
 		case 0:
@@ -170,6 +170,7 @@ function fnSqlConstUpdate(
 	$sql .= ",BROKERCHARGE = '$brokerCharge'";
 	$sql .= ",BROKERCONTACT = '$brokerContact'";
 	$sql .= ",INTERIORCHARGE = '$interiorCharge'";
+	$sql .= ",UPDT = CURRENT_TIMESTAMP";
 	$sql .= ",CONSTFLG1 = '$constFlg1'";
 	$sql .= ",CONSTFLG2 = '$constFlg2'";
 	$sql .= ",CONSTFLG3 = '$constFlg3'";

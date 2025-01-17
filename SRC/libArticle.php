@@ -132,7 +132,7 @@ function subArticle()
 					<td class="list_td<?php print $i ?>"><?php print $sellCharge ?></td>
 				</tr>
 			<?php
-				$i = ($i + 1) % 3;
+				$i = ($i + 1) % 2;
 			}
 			?>
 		</table>
@@ -259,8 +259,8 @@ function subArticleEdit()
 			</tr>
 		</table>
 
-		<a href="javascript:fnArticleEditCheck();"><img src="./images/<?php print $btnImage ?>" /></a>　
-		<a href="javascript:form.act.value='articleSearch';form.submit();"><img src="./images/btn_return.png" /></a>
+		<a href="javascript:fnArticleEditCheck();"><img src="./images/btn_return.png" /></a>　
+		<a href="javascript:form.act.value='articleSearch';form.submit();"><img src="./images/btn_enter.png" /></a>
 		<?php if ($articleNo) { ?>
 			<a href="javascript:fnArticleDeleteCheck(<?php print $articleNo ?>);"><img src="./images/btn_del.png" /></a>
 		<?php } ?>

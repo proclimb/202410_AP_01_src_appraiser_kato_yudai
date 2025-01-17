@@ -376,7 +376,7 @@ function subConstEdit()
 			</tr>
 			<tr>
 				<th>照明発注</th>
-				<td><input type="checkbox" name="lightOrder" value="1" <?php if ($lightOrder == 1) print ' checked="checked"' ?> /> 済</td>
+				<td><input type="checkbox" name="lightOrder" value="1"> 済</td>
 			</tr>
 			<tr>
 				<th>荷＆鍵引取</th>
@@ -449,10 +449,10 @@ function subConstEdit()
 			<tr>
 				<th>工事</th>
 				<td>
-					<input type="checkbox" name="constFlg1" value="1" <?php if ($constFlg1 == 1) print ' checked="checked"' ?> /> <?php print fnConstFlgName(0) ?>
-					<input type="checkbox" name="constFlg2" value="1" <?php if ($constFlg2 == 1) print ' checked="checked"' ?> /> <?php print fnConstFlgName(1) ?>
-					<input type="checkbox" name="constFlg3" value="1" <?php if ($constFlg3 == 1) print ' checked="checked"' ?> /> <?php print fnConstFlgName(2) ?>
-					<input type="checkbox" name="constFlg4" value="1" <?php if ($constFlg4 == 1) print ' checked="checked"' ?> /> <?php print fnConstFlgName(3) ?>
+					<input type="checkbox" name="constFlg1" value="1"> <?php print fnConstFlgName(0) ?>
+					<input type="checkbox" name="constFlg2" value="1"> <?php print fnConstFlgName(1) ?>
+					<input type="checkbox" name="constFlg3" value="1"> <?php print fnConstFlgName(2) ?>
+					<input type="checkbox" name="constFlg4" value="1"> <?php print fnConstFlgName(3) ?>
 				</td>
 			</tr>
 		</table>
