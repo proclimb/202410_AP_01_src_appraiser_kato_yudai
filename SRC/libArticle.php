@@ -2,6 +2,8 @@
 //
 //物件管理画面
 //
+
+var_dump($sql);
 function subArticle()
 {
 	$conn = fnDbConnect();
@@ -259,8 +261,8 @@ function subArticleEdit()
 			</tr>
 		</table>
 
-		<a href="javascript:fnArticleEditCheck();"><img src="./images/btn_return.png" /></a>　
-		<a href="javascript:form.act.value='articleSearch';form.submit();"><img src="./images/btn_enter.png" /></a>
+		<a href="javascript:fnArticleEditCheck();"><img src="./images/btn_enter.png" /></a>　
+		<a href="javascript:form.act.value='articleSearch';form.submit();"><img src="./images/btn_return.png" /></a>
 		<?php if ($articleNo) { ?>
 			<a href="javascript:fnArticleDeleteCheck(<?php print $articleNo ?>);"><img src="./images/btn_del.png" /></a>
 		<?php } ?>
