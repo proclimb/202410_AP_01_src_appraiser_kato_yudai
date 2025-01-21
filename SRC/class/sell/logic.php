@@ -17,7 +17,7 @@ function subSell()
 
     if (! $param["orderBy"]) {
         $param["orderBy"] = 'SEARCHDT';
-        $param["orderTo"] = 'desc';
+        $param["orderTo"] = 'DESC';
     }
 
     subMenu();
@@ -101,9 +101,9 @@ function subSellDelete()
 {
     $conn = fnDbConnect();
 
-    $param["sellNo"] = $_REQUEST['sellNo'];
+    $sellNO = $_REQUEST['sellNo'];
 
-    $sql = fnSqlSellDelete($param["sellNo"]);
+    $sql = fnSqlSellDelete($sellNO);
     $res = mysqli_query($conn, $sql);
 
     $_REQUEST['act'] = 'sellSearch';
