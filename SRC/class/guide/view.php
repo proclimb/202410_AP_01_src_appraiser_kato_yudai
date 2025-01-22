@@ -620,7 +620,7 @@ function subGuideEditView($param)
 			$calCnt += 3;
 		}
 		?>
-		<a href="javascript:fnGuideEditCheck();"><img src="./images/<?php print $param["btnImage"] ?>" /></a>　
+		<a href="javascript:fnGuideEditCheck();"><img src="./images/btn_enter.png" /></a>　
 		<a href="javascript:form.act.value='guideSearch';form.submit();"><img src="./images/btn_return.png" /></a>　
 		<?php if ($param["guideNo"]) { ?>
 			<a href="javascript:fnGuideDeleteCheck(<?php print $param["guideNo"] ?>);"><img src="./images/btn_del.png" /></a>
