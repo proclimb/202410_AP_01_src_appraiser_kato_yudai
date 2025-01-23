@@ -27,6 +27,7 @@ function subFTitleView($param)
                 <?php
                 $sql = fnSqlFTitleList($param);
                 $res = mysqli_query($param["conn"], $sql);
+                $i = 0;
                 while ($row = mysqli_fetch_array($res)) {
                     $docNo   = htmlspecialchars($row[0]);
                     $classNo = htmlspecialchars($row[1]);
@@ -94,6 +95,7 @@ function subFTitleItemView($param)
                 <?php
                 $sql = fnSqlFTitleList($param);
                 $res = mysqli_query($param["conn"], $sql);
+                $i = 0;
                 while ($row = mysqli_fetch_array($res)) {
                     $docNo   = htmlspecialchars($row[0]);
                     $classNo = htmlspecialchars($row[1]);
@@ -183,8 +185,8 @@ function subFTitleItemEditView($param)
         <input type="hidden" name="DocNo" value="<?php print $param["DocNo"]; ?>" />
         <input type="hidden" name="sDocNo" value="<?php print $param["sDocNo"]; ?>" />
         <input type="hidden" name="sClassNo" value="<?php print $param["sClassNo"]; ?>" />
-        <input type="hidden" name="orderBy" value="<?php print $orderBy; ?>" />
-        <input type="hidden" name="orderTo" value="<?php print $orderTo; ?>" />
+        <input type="hidden" name="orderBy" value="<?php print $param["orderBy"]; ?>" />
+        <input type="hidden" name="orderTo" value="<?php print $param["orderTo"]; ?>" />
 
         <div class="list">
             <table border="0" cellpadding="5" cellspacing="1">
