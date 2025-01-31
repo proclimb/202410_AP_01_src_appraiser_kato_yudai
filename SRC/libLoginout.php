@@ -52,8 +52,8 @@ function subLoginCheck()
 	$res = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_array($res);
 
-	// if ($row[0] && password_verify($pw, $row['PASSWORD'])) {
-	if ($row[0]) {
+	if ($row[0] && password_verify($pw, $row['PASSWORD'])) {
+		// if ($row[0]) {
 		$_COOKIE['cUserNo']   = $row[0];
 		$_COOKIE['authority'] = $row[1];
 		$_REQUEST['act']      = 'menu';
