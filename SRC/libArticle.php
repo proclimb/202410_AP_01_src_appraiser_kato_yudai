@@ -46,7 +46,8 @@ function subArticle()
 		<input type="hidden" name="sPage" value="<?php print $sPage ?>" />
 		<input type="hidden" name="articleNo" />
 		<input type="hidden" name="sName" />
-		<input type="hidden" name="sRoom" />
+
+
 
 		<a href="javascript:form.act.value='articleEdit';form.submit();"><img src="./images/btn_enter.png"></a>
 
@@ -128,7 +129,7 @@ function subArticle()
 					<td class="list_td<?php print $i ?>"><?php print $room ?></td>
 					<td class="list_td<?php print $i ?>"><?php print $drawing ?></td>
 					<td class="list_td<?php print $i ?>"><?php print $keyPlace ?></td>
-					<td class="list_td<?php print $i ?>"><a href="javascript:form.act.value='fManager';form.articleNo.value='<?php print $articleNo ?>';form.submit();"><?php print $article ?></a></td>
+					<td class="list_td<?php print $i ?>"><a href="javascript:form.act.value='fManager';form.sName.value='<?php print $article ?>';form.sRoom.value='<?php print $room ?>';form.submit();">表示</a></td>
 					<td class="list_td<?php print $i ?>"><?php print $keyBox ?></td>
 					<td class="list_td<?php print $i ?>"><?php print $drawing ?></td>
 					<td class="list_td<?php print $i ?>"><?php print $sellCharge ?></td>
