@@ -3,7 +3,6 @@
 //物件管理画面
 //
 
-var_dump($sql);
 function subArticle()
 {
 	$conn = fnDbConnect();
